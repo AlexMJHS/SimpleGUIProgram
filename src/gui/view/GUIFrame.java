@@ -20,6 +20,9 @@ public class GUIFrame extends JFrame
 		setupFrame();
 	}
 	
+	/**
+	 * Required helper method to prepare the frame.
+	 */
 	private void setupFrame()
 	{
 		this.setContentPane(basePanel);  //Must be first line of setupFrame! Installs he panel in the frame.

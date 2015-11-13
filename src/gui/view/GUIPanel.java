@@ -5,6 +5,9 @@ import gui.controller.GuiController;
 import javax.swing.JButton;
 import javax.swing.SpringLayout; //For layout
 import javax.swing.JTextField;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.Color;
 
 
 /**
@@ -40,10 +43,15 @@ public class GUIPanel extends JPanel
 	private void setupPanel()
 	{
 		this.setLayout(baseLayout);
+		this.setBackground(Color.MAGENTA);
 		this.add(firstButton);
 		this.add(firstTextField);
 	}
 	
+	/**
+	 * Helper method for arranging the panel.
+	 * Dumping ground for generated code.
+	 */
 	private void setupLayout()
 	{
 		baseLayout.putConstraint(SpringLayout.WEST, firstButton, 100, SpringLayout.WEST, this);
@@ -54,6 +62,12 @@ public class GUIPanel extends JPanel
 	
 	private void setupListeners()
 	{
-		
+		firstButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				firstTextField.setText("Wow, this is the most amazing click event ever! WOW!");
+			}
+		});
 	}
 }
