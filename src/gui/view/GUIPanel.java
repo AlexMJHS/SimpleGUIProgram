@@ -62,6 +62,17 @@ public class GUIPanel extends JPanel
 		baseLayout.putConstraint(SpringLayout.SOUTH, firstTextField, -67, SpringLayout.NORTH, firstButton);
 	}
 	
+	private void changeRandomColor()
+	{
+		int red, green, blue;
+		
+		red = (int) (Math.random() * 256);
+		green = (int) (Math.random() * 256);
+		blue = (int) (Math.random() * 256);
+		
+		this.setBackground(new Color(red, green, blue));
+	}
+	
 	private void setupListeners()
 	{
 		firstButton.addActionListener(new ActionListener()
@@ -74,7 +85,30 @@ public class GUIPanel extends JPanel
 		
 		this.addMouseListener(new MouseListener()
 		{
+			public void mouseClicked(MouseEvent click)
+			{
+				
+			}
 			
+			public void mouseReleased(MouseEvent released)
+			{
+				
+			}
+			
+			public void mousePressed(MouseEvent pressed)
+			{
+				
+			}
+			
+			public void mouseEntered(MouseEvent entered)
+			{
+				
+			}
+			
+			public void mouseExited(MouseEvent exited)
+			{
+				
+			}
 		});
 	}
 }
