@@ -118,6 +118,8 @@ public class GUIPanel extends JPanel
 				if(moved.isAltDown())
 				{
 					changeRandomColor();
+				}
+				
 			}
 			
 			public void mouseDragged(MouseEvent dragged)
